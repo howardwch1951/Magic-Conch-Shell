@@ -26,11 +26,53 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%); /* 初始居中位置 */
     text-align: center;
+    min-width: 300px; /* 設定最小寬度，圖片不再縮小 */
 }
 
 .center-shell img {
     max-width: 100%;
+    min-width: 300px; /* 設定最小寬度，圖片不再縮小 */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+}
+
+.select-container {
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.select-label {
+    font-size: 22px;
+    font-weight: bold; /* 設置為粗體 */
+    color: rgba(0, 162, 255);
+    
+    font-family: Arial, sans-serif;
+    margin-right: 15px; /* 標題和下拉選單之間的間距 */
+    padding: 10px 15px; /* 標題的內邊距 */
+    border-radius: 5px; /* 邊框圓角 */
+}
+
+.center-shell select {
+    padding: 10px 15px; /* 增加內邊距 */
+    font-size: 16px; /* 設定字型大小 */
+    background-color: rgba(0, 162, 255, 0.5); /* 背景顏色帶透明度 */
+    border: 2px solid rgba(0, 162, 255, 0.5); /* 邊框顏色 */
+    border-radius: 5px; /* 邊框圓角 */
+    color: white; /* 文字顏色 */
+    font-family: Arial, sans-serif; /* 字型 */
+    cursor: pointer; /* 顯示為可點擊手勢 */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* 動畫效果 */
+}
+
+.center-image select:hover {
+    background-color: rgba(0, 217, 255, 1); /* 滑鼠懸停時變為不透明 */
+    border-color: #009db0; /* 懸停時改變邊框顏色 */
+}
+
+.center-image select:focus {
+    outline: none; /* 去除聚焦時的默認邊框 */
+    box-shadow: 0 0 5px rgba(0, 217, 255, 1); /* 聚焦時顯示陰影 */
 }
