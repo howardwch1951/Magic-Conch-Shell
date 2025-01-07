@@ -32,7 +32,7 @@ const soundSets  =
         { src: 'shell-sound-8.mp3', probability: 0.05 }
     ]
 };
-// 預設為海綿寶寶機率
+// 預設為海綿寶寶機率 
 let currentSounds = soundSets.set1;
 soundSelector.addEventListener('change', (event) => {
     currentSounds = soundSets[event.target.value];
